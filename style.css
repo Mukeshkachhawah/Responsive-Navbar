@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+nav {
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+}
+nav .logo {
+  padding: 10px 34px 4px 72px;
+  flex: 1 1 30%;
+}
+nav .logo img {
+  height: 106px;
+  flex-wrap: wrap;
+}
+nav .menu-item {
+  display: flex;
+  flex: 1 1 52%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+nav .menu-item li {
+  list-style-type: none;
+}
+nav .menu-item li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: block;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+nav .menu-item #menu i:hover {
+  color: #dc5454;
+}
+nav .menu-item #menu:hover {
+  color: #dc5454;
+}
+nav .menu-item li a:hover {
+  color: #dc5454;
+}
+nav .menu-item #menu {
+  display: flex;
+}
+nav .menu-item #menu i {
+  padding-left: 6px;
+}
+nav .menu {
+  display: none;
+}
+
+nav .menu i {
+  padding-right: 22px;
+  font-size: 25px;
+  cursor: pointer;
+}
+nav #menu {
+  position: relative;
+}
+nav #menu #menu-menu-items {
+  position: absolute;
+  top: 100%;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+  left: 47px;
+  width: 150%;
+  display: none;
+  text-align: center;
+  /* background-color: #dc5454; */
+  border: 0.2px solid white;
+  z-index: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+nav #menu #menu-menu-items li {
+  padding: 15px 35px 8px 21px;
+}
+nav #menu #menu-menu-items li:hover {
+  background-color: #dc5454;
+}
+nav #menu #menu-menu-items li a:hover {
+  background-color: #dc5454;
+  color: white;
+}
+
+nav #menu:hover #menu-menu-items {
+  display: block;
+}
+nav .clickable-box {
+  display: none;
+  position: absolute;
+  top: 126px;
+  left: 0;
+  background-color: #470000;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 227px;
+}
+
+@media (max-width: 425px) {
+  html,
+  body {
+    max-width: 425px;
+  }
+  nav .menu-item {
+    display: none;
+  }
+  nav .menu {
+    display: block;
+  }
+  nav .logo {
+    padding: 10px 34px 4px 24px;
+  }
+  nav .logo img {
+    height: 55px;
+  }
+
+  nav .clickable-box {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 74px; /* Adjusted to align with smaller logo */
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    width: 100%; /* Adjust width */
+    padding: 0;
+  }
+  nav .clickable-box ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .clickable-box ul li {
+    border: 0.1px solid rgb(227, 227, 227);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  nav .menu-item #menu {
+    display: flex;
+  }
+  nav .menu-item #menu i {
+    padding-left: 6px;
+  }
+  nav .clickable-box ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+    letter-spacing: 5px;
+    padding: 10px 20px;
+  }
+  nav .clickable-box ul li a:hover {
+    background-color: #de3163;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  nav .clickable-box ul li,
+  a:hover {
+    background-color: #de3163;
+    color: white;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  body {
+    overflow: hidden;
+    max-width: 768px;
+  }
+  nav .logo {
+    padding: 10px 34px 4px 30px;
+    flex: 1 1 20%;
+  }
+  nav .logo img {
+    height: 75px;
+  }
+  nav .menu-item {
+    flex: 3 1 15%;
+  }
+  nav .menu-item li {
+    padding: 0px 5p 0px 5px;
+  }
+  nav .menu-item #menu {
+    display: flex;
+  }
+  nav .menu-item #menu i {
+    padding-left: 6px;
+  }
+  nav .menu-item li a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 2560px) {
+  body {
+    max-width: 2560px;
+    min-width: 769px;
+  }
+  nav .logo {
+    padding: 10px 34px 4px 30px;
+    flex: 1 1 20%;
+  }
+  nav .logo img {
+    height: 75px;
+  }
+  nav .menu-item {
+    flex: 3 1 15%;
+  }
+  nav .menu-item #menu {
+    display: flex;
+  }
+  nav .menu-item #menu i {
+    padding-left: 6px;
+  }
+  nav .menu-item li {
+    padding: 0px 5p 0px 5px;
+  }
+  nav .menu-item li a {
+    font-size: 15px;
+  }
+}

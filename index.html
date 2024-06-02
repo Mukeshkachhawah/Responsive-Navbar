@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="nav-bar" id="nav-bar">
+        <div class="logo">
+            <img src="./Emblem_of_India.svg.png" alt="image loading">
+        </div>
+        <ul class="menu-item">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li id="menu"><a href="#">Menu</a>
+                <i class="fa-solid fa-caret-down"></i>
+                <div id="menu-menu-items">
+                    <ul>
+                        <li><a href="#">item1</a></li>
+                        <li><a href="#">item2</a></li>
+                        <li><a href="#">item3</a></li>
+                        <li><a href="#">item4</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Cheaf</a></li>
+            <li><a href="#">Features</a></li>
+        </ul>
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="clickable-box">
+            <ul class="mobile-menu-item">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a>
+
+                </li>
+                <li><a href="#">Chef</a></li>
+                <li><a href="#">Features</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="./javascript.js"></script>
+</body>
+
+</html>
